@@ -80,7 +80,10 @@ jobs:
         - ACTION=cibuildwheel
     - stage: deploy
       name: Build and deploy aarch64 Linux wheels
-      arch: arm64
+      arch: arm64-graviton2
+      dist: focal
+      virt: vm
+      group: edge
       services: docker
       env:
         - ACTION=cibuildwheel
