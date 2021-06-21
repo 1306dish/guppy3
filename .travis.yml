@@ -79,6 +79,12 @@ jobs:
       env:
         - ACTION=cibuildwheel
     - stage: deploy
+      name: Build and deploy aarch64 Linux wheels
+      arch: arm64
+      services: docker
+      env:
+        - ACTION=cibuildwheel
+    - stage: deploy
       name: Build and deploy macOS wheels
       os: osx
       language: shell
