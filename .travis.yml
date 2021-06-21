@@ -21,7 +21,23 @@ jobs:
       python: 3.6
       env:
         - ACTION=test
+    - name: Python 3.6 on Linux aarch64
+      arch: arm64-graviton2
+      dist: focal
+      virt: vm
+      group: edge
+      python: 3.6
+      env:
+        - ACTION=test
     - name: Python 3.7 on Linux
+      python: 3.7
+      env:
+        - ACTION=test
+    - name: Python 3.7 on Linux aarch64
+      arch: arm64-graviton2
+      dist: focal
+      virt: vm
+      group: edge
       python: 3.7
       env:
         - ACTION=test
@@ -38,6 +54,14 @@ jobs:
       env:
         - ACTION=test
     - name: Python 3.9 on Linux
+      python: 3.9-dev
+      env:
+        - ACTION=test
+    - name: Python 3.9 on Linux aarch64
+      arch: arm64-graviton2
+      dist: focal
+      virt: vm
+      group: edge
       python: 3.9-dev
       env:
         - ACTION=test
