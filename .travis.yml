@@ -29,6 +29,14 @@ jobs:
       python: 3.8
       env:
         - ACTION=test
+    - name: Python 3.8 on Linux aarch64
+      arch: arm64-graviton2
+      dist: focal
+      virt: vm
+      group: edge
+      python: 3.8
+      env:
+        - ACTION=test
     - name: Python 3.9 on Linux
       python: 3.9-dev
       env:
